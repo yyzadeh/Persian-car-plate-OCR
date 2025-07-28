@@ -59,8 +59,25 @@ This project detects **Persian car license plates** using **YOLOv12** and recogn
 
 - plate detected
 - OCR accuracy depends on resolution and angle <br>
-  (pytesseract doesn't work well on Persian characters)
+  (pytesseract doesn't work well on Persian characters)<br>
+```python
+# loop through detections
+for result in results:
+    boxes = result.boxes
+    for box in boxes:
+        # coordinates are in xyxy format
+        x1, y1, x2, y2 = box.xyxy[0].tolist()
+        print(f"Coordinates: {x1}, {y1}, {x2}, {y2}")
 
+
+img = cv2.imread("runs/detect/inference/test.jpg")
+x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
+cutted_image= img[y1:y2,x1:x2]
+
+
+img_text = pytesseract.image_to_string(cutted_image,lang="fas")
+print(img_text)
+```
 ---
 
 ## ✍️ Author
