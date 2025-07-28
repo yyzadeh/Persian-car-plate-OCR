@@ -1,6 +1,7 @@
 # Persian Car Plate OCR🚗🔍
 
-This project detects **Persian car license plates** using **YOLOv12** and recognizes their characters using **PyTesseract**. It is an end-to-end Optical Character Recognition (OCR) pipeline for Iranian license plates.
+This project detects **Persian car license plates** using **YOLOv12** and recognizes their characters using **PyTesseract**. It is an end-to-end Optical Character Recognition (OCR) pipeline for Iranian license plates.<br>
+Also, I uploaded the fine-tuned model to make it eas to use. (best.pt)
 
 ---
 
